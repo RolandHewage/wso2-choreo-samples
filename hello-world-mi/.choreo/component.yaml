@@ -1,2 +1,17 @@
 schemaVersion: 1.2
 
+dependencies:
+    connectionReferences:
+    - name: My Go to MI Conection
+      resourceRef: service:/secret-test-env-2/my-buildpack-mi-connect-a/v1/db2ef/PUBLIC
+      env:
+        - from: ServiceURL
+          to: CHOREO_MY_GO_TO_MI_CONECTION_SERVICEURL
+        - from: ConsumerKey
+          to: CHOREO_MY_GO_TO_MI_CONECTION_CONSUMERKEY
+        - from: ConsumerSecret
+          to: CHOREO_MY_GO_TO_MI_CONECTION_CONSUMERSECRET
+        - from: TokenURL
+          to: CHOREO_MY_GO_TO_MI_CONECTION_TOKENURL
+        - from: ChoreoAPIKey
+          to: CHOREO_MY_GO_TO_MI_CONECTION_CHOREOAPIKEY
