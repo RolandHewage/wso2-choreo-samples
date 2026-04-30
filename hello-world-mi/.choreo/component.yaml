@@ -1,0 +1,17 @@
+schemaVersion: 1.1
+
+dependencies:
+  serviceReferences:
+    - name: choreo:///rolyhewage/secret-test-env-2/my-mi-connect-api/db2ef/v1/PUBLIC
+      connectionConfig: 01f144ba-fa59-1f06-9360-727dbc46debd
+      env:
+        - from: ServiceURL
+          to: CHOREO_MY_MI_GO_CONNECTION_SERVICEURL
+        - from: ConsumerKey
+          to: CHOREO_MY_MI_GO_CONNECTION_CONSUMERKEY
+        - from: ConsumerSecret
+          to: CHOREO_MY_MI_GO_CONNECTION_CONSUMERSECRET
+        - from: TokenURL
+          to: CHOREO_MY_MI_GO_CONNECTION_TOKENURL
+        - from: ChoreoAPIKey
+          to: CHOREO_MY_MI_GO_CONNECTION_CHOREOAPIKEY
