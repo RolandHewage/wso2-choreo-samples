@@ -43,3 +43,8 @@ endpoints:
     # This is only applicable to REST endpoint types.
     # The path should be relative to the docker context.
     schemaFilePath: openapi.yaml
+
+dependencies:
+    connectionReferences:
+    - name: My Go Service API Connect
+      resourceRef: service:/connection-test/my-go-service-api/v1/803f0/PUBLIC
