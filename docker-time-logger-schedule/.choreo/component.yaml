@@ -1,0 +1,5 @@
+schemaVersion: 1.2
+dependencies:
+    connectionReferences:
+    - name: My Go Service API Connect
+      resourceRef: service:/connection-test/my-go-service-api/v1/803f0/PUBLIC
