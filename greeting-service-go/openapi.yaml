@@ -25,3 +25,18 @@ paths:
                 type: string
       deprecated: false
       security: []
+  /greeter/build-message:
+    get:
+      summary: Return the value baked into the image at build time
+      description: Reads /app/build-message.txt (populated from Dockerfile ARG BUILD_MESSAGE)
+      tags:
+        - greeting
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []
