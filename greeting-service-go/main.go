@@ -26,6 +26,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"strings"
 	"syscall"
 	"time"
 )
@@ -34,6 +35,7 @@ func main() {
 
 	serverMux := http.NewServeMux()
 	serverMux.HandleFunc("/greeter/greet", greet)
+	serverMux.HandleFunc("/greeter/build-message", buildMessage)
 
 	serverPort := 9090
 	server := http.Server{
@@ -68,4 +70,16 @@ func greet(w http.ResponseWriter, r *http.Request) {
 		name = "Stranger"
 	}
 	fmt.Fprintf(w, "Hello, %s!\n", name)
+}
+
+// buildMessage returns the value baked in at image build time from the
+// BUILD_MESSAGE build argument. Used to verify that Choreo passes the
+// UI-configured Build Environment Variables as --build-arg to podman build.
+func buildMessage(w http.ResponseWriter, r *http.Request) {
+	data, err := os.ReadFile("/app/build-message.txt")
+	if err != nil {
+		http.Error(w, "build-message.txt not found", http.StatusInternalServerError)
+		return
+	}
+	fmt.Fprintln(w, strings.TrimSpace(string(data)))
 }
