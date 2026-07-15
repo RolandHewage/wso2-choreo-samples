@@ -42,7 +42,7 @@ COPY --from=builder /app/go-greeter .
 # Bake a build-time value into the image so we can verify --build-arg wiring
 # end-to-end. The Choreo UI can supply BUILD_MESSAGE=... to override the default.
 ARG BUILD_MESSAGE=default-not-set
-RUN echo "$BUILD_MESSAGE" > /app/build-message.txt
+RUN echo "BUILD_MESSAGE_VALUE=$BUILD_MESSAGE" && echo "$BUILD_MESSAGE" > /app/build-message.txt
 
 # Create a user with a known UID/GID within range 10000-20000.
 # This is required by Choreo to run the container as a non-root user.
