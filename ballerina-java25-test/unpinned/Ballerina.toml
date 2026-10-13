@@ -1,0 +1,4 @@
+[package]
+org = "choreo"
+name = "java25_unpinned"
+version = "1.0.0"

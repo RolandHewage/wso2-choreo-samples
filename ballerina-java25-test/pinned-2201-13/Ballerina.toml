@@ -1,0 +1,5 @@
+[package]
+org = "choreo"
+name = "java25_pinned"
+distribution = "2201.13.7"
+version = "1.0.0"
