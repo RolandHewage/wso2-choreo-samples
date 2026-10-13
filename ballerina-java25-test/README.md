@@ -5,7 +5,7 @@ Two minimal Ballerina services for checking which Java version Choreo uses for t
 | Component directory | `distribution` in `Ballerina.toml` | Expected Ballerina | Expected Java |
 |---|---|---|---|
 | `ballerina-java25-test/unpinned` | not set (uses the latest) | 2201.14.x | 25 |
-| `ballerina-java25-test/pinned-2201-13` | `2201.13.7` | 2201.13.7 | 21 |
+| `ballerina-java25-test/pinned-2201-13` | `2201.13.6` | 2201.13.6 | 21 |
 
 ## How to test in Choreo
 

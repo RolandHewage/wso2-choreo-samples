@@ -20,7 +20,7 @@ schemaVersion: 1.2
 # +optional Incoming connection details for the component
 endpoints:
   - name: greeting
-    displayName: Ballerina Java 25 test (pinned 2201.13.7)
+    displayName: Ballerina Java 25 test (pinned 2201.13.6)
     service:
       basePath: /greeting
       port: 9090
