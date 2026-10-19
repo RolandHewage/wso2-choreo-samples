@@ -1,0 +1,4 @@
+[package]
+org = "choreo"
+name = "logcontext_quote_repro"
+version = "1.0.0"
