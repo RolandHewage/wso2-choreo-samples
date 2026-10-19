@@ -17,7 +17,7 @@ function testEveryPrintedLineIsValidJson() returns error? {
 @test:Config {}
 function testQuoteCase() returns error? {
     json result = check testClient->get("/quote");
-    test:assertEquals(check result.expectedToShowEmptyContext, true);
+    test:assertEquals(check result.beforeFix, "{}");
     string printed = check result.printed;
     test:assertTrue(printed.includes("t;desc=\\\"abc\\\""));
 }
